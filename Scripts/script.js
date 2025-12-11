@@ -42,7 +42,7 @@ for (let i = 0; i < str.length; i++) {
         // puts every other index/char inside of a cell
     }
 
-    if (i == str.length - 1){
+    if (i == str.length - 1) {
         // console.log(...cells);
         results.push([...cells]);
         // stores a copy of the last row
@@ -60,12 +60,12 @@ let headings = results[0].map(h => h.toLowerCase());
 // Declaring variable persons -  to store all my different (per) aka people
 let persons = [];
 
-for (let i = 1; i < results.length; i++){
+for (let i = 1; i < results.length; i++) {
     let row = results[i];
     let per = {};
     // Starting at index 1 (skipping index 0) of the results variable, turning each index into an object
 
-    for (let x = 0; x < headings.length; x++){
+    for (let x = 0; x < headings.length; x++) {
         per[headings[x]] = row[x];
         // goes through headings assigning one to every index of each "row" aka every string
     }
@@ -77,4 +77,29 @@ for (let i = 1; i < results.length; i++){
 // Logs all people !!!
 console.log(persons);
 
-//
+// Sorting and Manipulating Data
+
+persons.pop();
+// Removed Bill
+//console.log(persons);
+
+persons.splice(1, 0, {
+    id: '48',
+    name: 'Barry',
+    occupation: 'Runner',
+    age: '25'
+});
+// Inserted Barry at Index 1
+// console.log(persons);
+
+persons.push({
+    id: '7',
+    name: 'Bilbo',
+    occupation: 'none',
+    age: '111'
+});
+//Add Bilbo to the end
+// console.log(persons);
+
+// Full Circle
+
