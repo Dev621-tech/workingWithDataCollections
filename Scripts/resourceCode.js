@@ -48,7 +48,7 @@ for (let i = 0; i < str.length; i++) {
 
     } else {
         if (commas == 0) {
-            cell1 += str[i]; // cell1 = cell1 = str[i]
+            cell1 += str[i]; // cell1 = cell1 + str[i]
         } else if (commas == 1) {
             cell2 += str[i];
         } else if (commas == 3) {
