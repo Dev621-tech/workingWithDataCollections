@@ -36,7 +36,7 @@ for (let i = 0; i < str.length; i++) {
         cells = Array(numberOfColumn).fill('');
         commas = 0;
         // also resets the cells and commas variable back to 0
-        
+
     } else {
         cells[commas] += str[i];
         // puts every other index/char inside of a cell
@@ -51,3 +51,30 @@ for (let i = 0; i < str.length; i++) {
 
 // Log all results !!!
 console.log(results);
+
+
+// Transforming Data
+// Declaring the variable headings as a new array of the index 0 of the results array - .map is turning each string in that array to all lower case
+let headings = results[0].map(h => h.toLowerCase());
+
+// Declaring variable persons -  to store all my different (per) aka people
+let persons = [];
+
+for (let i = 1; i < results.length; i++){
+    let row = results[i];
+    let per = {};
+    // Starting at index 1 (skipping index 0) of the results variable, turning each index into an object
+
+    for (let x = 0; x < headings.length; x++){
+        per[headings[x]] = row[x];
+        // goes through headings assigning one to every index of each "row" aka every string
+    }
+
+    persons.push(per);
+    // Pushes copy to person object
+}
+
+// Logs all people !!!
+console.log(persons);
+
+//
