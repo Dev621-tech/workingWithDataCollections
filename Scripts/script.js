@@ -102,4 +102,5 @@ persons.push({
 // console.log(persons);
 
 // Full Circle
-
+// Printing the array out as a string from original format
+console.log('`' + headings.join(`,`) + ',' + persons.map(d => [d.id, d.name, d.occupation, d.age].join(',')) + '`');
